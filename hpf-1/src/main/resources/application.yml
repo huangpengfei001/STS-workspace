@@ -1,0 +1,53 @@
+#server配置
+server:
+  servlet:
+    context-path: /
+  port: 8082
+    
+#mysql-datasource-config
+spring:
+  application:
+    name: eureka-client2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    ##com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hpf_mysql
+    username: root
+    password: 1234
+  devtools:
+    restart:
+      enabled: true
+#redis连接配置
+  redis:
+    host: 192.168.88.110
+    port: 6379
+    password: 
+#rabbitmq配置
+#  rabbitmq:
+#    host: 192.168.88.111
+#    port: 5672
+#    username: guest
+ #   password: guest
+ #   listener:
+ #     simple:
+ #       acknowledge-mode: manual
+ #     direct:
+ ##       acknowledge-mode: manual
+    
+    
+    
+#mybatis xml文件扫描位置（sql）
+mybatis:
+  mapper-locations:
+  - classpath:com/example/demo/mapper/*.xml
+logging:
+  config: classpath:logback-boot.xml
+
+eureka:
+  instance:
+    hostname: hpf-client2
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
