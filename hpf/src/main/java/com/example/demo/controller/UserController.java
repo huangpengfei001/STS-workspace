@@ -24,9 +24,10 @@ public class UserController {
 
 	@RequestMapping("test")
 	public Map<String, Object> test(String userName) {
-		System.out.println("==============");
+		System.out.println("==============" + userName);
 		Map<String, Object> resultMap = new HashMap<String, Object>(1);
 		resultMap.put("userName1222", userName);
+		System.out.println("resultMap: " + resultMap);
 //		resultMap.put("userName1223", redisUtil.get("hpf"));
 //		rabbitSendUtils.send(resultMap);
 //		rabbitSendUtils.send2(resultMap, "topic1.msg");

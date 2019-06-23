@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface HpfFeign {
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	Map<String, Object> test(@RequestParam(value = "userName") String userName);
+	Map<String, Object> test(@RequestParam(value = "userName") String name);
 
 }
