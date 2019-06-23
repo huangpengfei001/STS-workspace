@@ -8,9 +8,8 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class RabbitSendUtils implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnCallback {
 
 	@Autowired

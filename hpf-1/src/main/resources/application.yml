@@ -45,9 +45,11 @@ logging:
 
 eureka:
   instance:
-    hostname: hpf-client2
+    hostname: eureka-client2
+    ip-address: 192.168.2.185
+    prefer-ip-address: true
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://192.168.2.185:8080/eureka

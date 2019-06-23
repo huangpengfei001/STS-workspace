@@ -12,6 +12,7 @@ import com.example.demo.annotation.TimeCost;
 import com.example.demo.common.PageInfo;
 import com.example.demo.model.UserInfo;
 import com.example.demo.service.UserService;
+import com.example.demo.util.RabbitSendUtils;
 
 @RestController
 public class UserController {
@@ -19,21 +20,15 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-//	@Autowired
-//	private RabbitSendUtils rabbitSendUtils;
+	@Autowired
+	private RabbitSendUtils rabbitSendUtils;
 
 	@RequestMapping("test")
 	public Map<String, Object> test(String userName) {
-		System.out.println("==============");
 		Map<String, Object> resultMap = new HashMap<String, Object>(1);
 		resultMap.put("userName1222", userName);
 //		resultMap.put("userName1223", redisUtil.get("hpf"));
-//		rabbitSendUtils.send(resultMap);
-//		rabbitSendUtils.send2(resultMap, "topic1.msg");
-//		rabbitSendUtils.send2(resultMap, "topic1.aaa");
-//		rabbitSendUtils.send2(resultMap, "topic2.msg");
-//		rabbitSendUtils.callbackSend(resultMap);
-//		rabbitSendUtils.send3(resultMap);
+		rabbitSendUtils.send(resultMap);
 		return resultMap;
 	}
 

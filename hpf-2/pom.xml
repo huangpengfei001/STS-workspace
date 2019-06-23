@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>hpf-1</artifactId>
+	<artifactId>hpf-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hpf-1</name>
+	<name>hpf-2</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -95,28 +95,6 @@
 		 	<artifactId>slf4j-api</artifactId>
 		 </dependency>
 		 
-		 <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		
-		<!-- eureka-server依赖 -->
-		 <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
-		 
-		 <!-- eureka-client依赖 -->
-		 <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-netflix-eureka-client</artifactId>
-		</dependency>
-		<!-- feign依赖 -->
-		 <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        
 	</dependencies>
 
 	<dependencyManagement>

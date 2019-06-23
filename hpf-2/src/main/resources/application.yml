@@ -2,12 +2,9 @@
 server:
   servlet:
     context-path: /
-  port: 8081
-    
+  port: 8082  
 #mysql-datasource-config
 spring:
-  application:
-    name: eureka-client1
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     ##com.mysql.jdbc.Driver
@@ -28,7 +25,6 @@ spring:
     port: 5672
     username: guest
     password: guest
-    publisher-confirms: true
     
     
     
@@ -38,14 +34,3 @@ mybatis:
   - classpath:com/example/demo/mapper/*.xml
 logging:
   config: classpath:logback-boot.xml
-
-eureka:
-  instance:
-    hostname: eureka-client1
-    ip-address: 192.168.2.185
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://192.168.2.185:8080/eureka

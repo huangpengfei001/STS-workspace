@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.annotation.TimeCost;
 import com.example.demo.common.PageInfo;
+import com.example.demo.feign.HpfFeign;
 import com.example.demo.model.UserInfo;
 import com.example.demo.service.UserService;
 
@@ -21,13 +22,16 @@ public class UserController {
 
 //	@Autowired
 //	private RabbitSendUtils rabbitSendUtils;
+	@Autowired
+	private HpfFeign feign;
 
-	@RequestMapping("test")
+	@RequestMapping("test1")
 	public Map<String, Object> test(String userName) {
-		Map<String, Object> resultMap = new HashMap<String, Object>(1);
-		resultMap.put("userName1222", userName);
+//		Map<String, Object> resultMap = new HashMap<String, Object>(1);
+//		resultMap.put("userName1222", userName);
 //		resultMap.put("userName1223", redisUtil.get("hpf"));
 //		rabbitSendUtils.send(resultMap);
+		Map<String, Object> resultMap = feign.test(userName);
 		return resultMap;
 	}
 
